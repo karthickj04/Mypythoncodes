@@ -2,27 +2,35 @@ import sys
 
 
 def sum1(a, b):
-    x = a + b
-    return x
+    w = a + b
+    return w
 
 
 def sub(a, b):
-    y = a - b
-    return y
+    u = a - b
+    return u
 
 
 def mult(a, b):
     z = a * b
     return z
 
+
 def average():
-    v = sum1(a, b)/2
+    v = sum1(x, y)/2
     return v
 
+
+def exponential(a, b):
+    i = a ** b
+    return i
+
+
 lst = sys.argv
-a = int(lst[1])
-b = int(lst[2])
-print("The Sum of two numbers is ", sum1(a, b))
-print("The Subtracted of two numbers is ", sub(a, b))
-print("The Multiplied value of two numbers is ", mult(a, b))
+x = int(lst[1])
+y = int(lst[2])
+print("The Sum of two numbers is ", sum1(x, y))
+print("The Subtracted of two numbers is ", sub(x, y))
+print("The Multiplied value of two numbers is ", mult(x, y))
 print("The Average of two numbers is ", average())
+print('The Exponential of ', x, ' power ', y, "is ", exponential(x, y))
