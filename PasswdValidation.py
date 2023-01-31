@@ -24,40 +24,32 @@ def passwdsplchk(passwd):
 def passwducchk(passwd):
     logging.info("Evaluating if upper case is used")
     upchk = False
-    for i in passwd:
-        if i.isupper():
-            upchk = True
-            break
+    if re.search("[A-Z]", passwd):
+        upchk = True
     return upchk
 
 
 def passwdlcchk(passwd):
     logging.info("Evaluating if Lower case is used")
     lcchk = False
-    for i in passwd:
-        if i.islower():
-            lcchk = True
-            break
+    if re.search("[a-z]", passwd):
+        lcchk = True
     return lcchk
 
 
 def numbrchk(passwd):
     logging.info("Evaluating if Digit is used")
     dcchk = False
-    for i in passwd:
-        if i.isdigit():
-            dcchk = True
-            break
+    if re.search("[0-9]", passwd):
+        dcchk = True
     return dcchk
 
 
 def spacechk(passwd):
     logging.info("Evaluating if space is not used")
     scchk = True
-    for i in passwd:
-        if i.isspace():
-            scchk = False
-            break
+    if re.search("\s", passwd):
+        scchk = False
     return scchk
 
 
