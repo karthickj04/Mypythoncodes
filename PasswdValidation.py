@@ -7,11 +7,9 @@ logging.basicConfig(filename='pswdvalid.log', level=logging.DEBUG)
 
 def passwdlencheck(passwd):
     logging.info("Evaluating if password having minimum length of 15 digit")
+    len1 = False
     if len(passwd) >= 15:
         len1 = True
-    else:
-        len1 = False
-
     return len1
 
 
