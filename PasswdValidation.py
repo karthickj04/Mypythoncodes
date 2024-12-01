@@ -65,7 +65,7 @@ def spacechk(passwd):
 def passwdchk(passwd):
     logging.info("Evaluating password")
     if passwdlencheck(passwd) and spacechk(passwd) and passwdsplchk(passwd) and passwducchk(passwd) and passwdlcchk(passwd) and numbrchk(passwd) is True:
-        print("Your password follows all security standards")
+        print("ExcellentYour password follows all security standards")
     else:
         logging.error("Your Password has failed to meet complexity standard")
         print('''Your password does not meet Complexity standard - Please follow below guidelines
