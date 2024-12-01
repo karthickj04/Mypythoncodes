@@ -9,24 +9,28 @@ def passwdlencheck(passwd):
     logging.info("Evaluating if password having minimum length of 15 digit")
     len1 = False
     if len(passwd) >= 15:
-        len1 = True
+        len1 = True        
+    else:
+        print("Password does not contain minimum length of 15 digits")
     return len1
-
+    
 
 def passwdsplchk(passwd):
     logging.info("Evaluating if password has spl Characters @, $, _")
     spl = True
     if bool(re.search('[@$_]', passwd)) is False:
         spl = False
+        print("Password does not contain spl characters @, $, _")
     return spl
-
-
+    
 def passwducchk(passwd):
     logging.info("Evaluating if upper case is used")
     upchk = False
     if re.search("[A-Z]", passwd):
         upchk = True
-    return upchk
+    else:
+        print("Password does not contain upper case")
+    return upchk    
 
 
 def passwdlcchk(passwd):
@@ -34,7 +38,9 @@ def passwdlcchk(passwd):
     lcchk = False
     if re.search("[a-z]", passwd):
         lcchk = True
-    return lcchk
+    else:
+        print("Password does not contain lower case")
+    return lcchk 
 
 
 def numbrchk(passwd):
@@ -42,6 +48,8 @@ def numbrchk(passwd):
     dcchk = False
     if re.search("[0-9]", passwd):
         dcchk = True
+    else:
+        print("Password does not contain Digit")
     return dcchk
 
 
@@ -50,6 +58,7 @@ def spacechk(passwd):
     scchk = True
     if re.search("\s", passwd):
         scchk = False
+        print("Password contains space.")
     return scchk
 
 
